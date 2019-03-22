@@ -21,3 +21,7 @@ exports.aboutPage = (req, res) => {
 exports.contactusPage = (req, res) => {
     res.render('frontend/contact-us', {});
 }
+
+exports.shopPage = (req, res) => {
+    res.render('frontend/shop', {});
+}
