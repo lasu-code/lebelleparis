@@ -25,3 +25,11 @@ exports.contactusPage = (req, res) => {
 exports.shopPage = (req, res) => {
     res.render('frontend/shop', {});
 }
+
+exports.singlepostPage = (req, res) => {
+    res.render('frontend/singlepost', {});
+}
+
+exports.singlevideoPage = (req, res) => {
+    res.render('frontend/singlevideo', {  });
+}

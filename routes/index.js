@@ -11,4 +11,9 @@ router.get('/about', frontController.aboutPage);
 router.get('/contact-us', frontController.contactusPage);
 router.get('/shop', frontController.shopPage);
 
+//these two routes will actually take in a variable ID.
+//I intentionally ignored it for now till I'm done with the frontend.
+router.get('/singlepost', frontController.singlepostPage);  //the route will now be /singlepost/:_id
+router.get('/singlevideo', frontController.singlevideoPage); //the route will now be /singlevideo/:_id
+
 module.exports = router;
