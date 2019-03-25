@@ -23,7 +23,18 @@ router.get('/login', backController.loginPage);
 router.get('/dashboard', backController.dashboardPage);
 router.get('/dashboard_videos', backController.videosPage);
 router.get('/dashboard_fashion', backController.fashionPage);
+router.get('/dashboard_covers', backController.coversPage);
+router.get('/dashboard_shop', backController.shopPage);
+router.get('/dashboard_about', backController.aboutPage);
+router.get('/dashboard_changeEmail', backController.changeEmailPage);
+router.get('/dashboard_changePass', backController.changePassPage);
+router.get('/dashboard_deleteAcc', backController.deleteAccPage);
 
+// the following routes will also accept variables in order to target a particular video ID
+router.get('/dashboard_editVideo', backController.editVideoPage);
+router.get('/dashboard_editFashion', backController.editFashionPage);
+router.get('/dashboard_editShop', backController.editShopPage);
+router.get('/dashboard_editCover', backController.editCoverPage);
 
 
 module.exports = router;
