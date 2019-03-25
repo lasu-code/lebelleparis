@@ -1,8 +1,9 @@
 var express = require('express');
 var router = express.Router();
 let frontController = require('../controllers/frontendController')
+let backController = require('../controllers/backendController')
 
-/* page routes */
+/* frontend routes */
 router.get('/', frontController.indexPage);
 router.get('/videos', frontController.videosPage);
 router.get('/fashion', frontController.fashionPage);
@@ -15,5 +16,14 @@ router.get('/shop', frontController.shopPage);
 //I intentionally ignored it for now till I'm done with the frontend.
 router.get('/singlepost', frontController.singlepostPage);  //the route will now be /singlepost/:_id
 router.get('/singlevideo', frontController.singlevideoPage); //the route will now be /singlevideo/:_id
+
+
+// backend routes
+router.get('/login', backController.loginPage);
+router.get('/dashboard', backController.dashboardPage);
+router.get('/dashboard_videos', backController.videosPage);
+router.get('/dashboard_fashion', backController.fashionPage);
+
+
 
 module.exports = router;
