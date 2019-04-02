@@ -2,12 +2,12 @@
 
 <div id="sidebar"> <a href="#" class="visible-phone"><i class="icon icon-home"></i> L'Belle Paris</a>
     <ul>
-        <li class="active"><a href="/dashboard"><i class="icon icon-home"></i> <span>Dashboard</span></a> </li>
-        <li > <a href="/dashboard_videos"><i class="icon icon-facetime-video"></i> <span>Videos</span></a> </li>
-        <li> <a href="/dashboard_fashion"><i class="icon icon-inbox"></i> <span>Fashion</span></a> </li>
-        <li><a href="/dashboard_shop"><i class="icon icon-th"></i> <span>Shop</span></a></li>
-        <li><a href="/dashboard_covers"><i class="icon icon-fullscreen"></i> <span>Cover</span></a></li>
-        <li> <a href="/dashboard_about"><i class="icon icon-th-list"></i> <span>About</span></a></li>
+        <li class="<%= (activeNav === "home") ? "active" : " " %>"><a href="/dashboard"><i class="icon icon-home"></i> <span>Dashboard</span></a> </li>
+        <li class="<%= (activeNav === "videos") ? "active" : " " %>"> <a href="/dashboard_videos"><i class="icon icon-facetime-video"></i> <span>Videos</span></a> </li>
+        <li class="<%= (activeNav === "fashion") ? "active" : " " %>"> <a href="/dashboard_fashion"><i class="icon icon-inbox"></i> <span>Fashion</span></a> </li>
+        <li class="<%= (activeNav === "shop") ? "active" : " " %>"><a href="/dashboard_shop"><i class="icon icon-th"></i> <span>Shop</span></a></li>
+        <li class="<%= (activeNav === "covers") ? "active" : " " %>"><a href="/dashboard_covers"><i class="icon icon-fullscreen"></i> <span>Cover</span></a></li>
+        <li class="<%= (activeNav === "about") ? "active" : " " %>"> <a href="/dashboard_about"><i class="icon icon-th-list"></i> <span>About</span></a></li>
         <li> <a href="/" target="blank"><i class="icon icon-share-alt"></i> <span>View Site</span></a></li>
     </ul>
 </div>

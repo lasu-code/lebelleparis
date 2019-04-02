@@ -18,8 +18,10 @@ router.get('/singlepost', frontController.singlepostPage);  //the route will now
 router.get('/singlevideo', frontController.singlevideoPage); //the route will now be /singlevideo/:_id
 
 
+
 // backend routes
 router.get('/login', backController.loginPage);
+router.get('/forgot_password', backController.forgotPassPage);
 router.get('/dashboard', backController.dashboardPage);
 router.get('/dashboard_videos', backController.videosPage);
 router.get('/dashboard_fashion', backController.fashionPage);
