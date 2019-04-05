@@ -3,13 +3,23 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const mongoose = require("mongoose");
+const session = require("express-session");
+const passport = require("passport");
+const MongoStore = require("connect-mongodb-session")(session);
+const flash = require("express-flash");
+const dotenv = require("dotenv");
+const methodOverride = require("method-override");
+
+dotenv.config();
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
 
-
+let db_uri = 'mongodb://localhost:27017/lebelleparis';
+mongoose.connect(db_uri, { useNewUrlParser: true, useCreateIndex: true }).then(console.log("database connected")).catch(err => console.log(err));
 
 
 
@@ -20,8 +30,20 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(cookieParser('mysecret'));
+app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(session({
+  secret: "mysecrect",
+  resave: true,
+  saveUninitialized: true,
+  store: new MongoStore({ uri: db_uri, collection: "app_sessions" })
+}));
+
+app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

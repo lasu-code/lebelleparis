@@ -34,31 +34,31 @@
                     <h5>Upload Videos</h5>
                 </div>
                 <div class="widget-content nopadding">
-                    <form action="#" class="form-horizontal">
+                    <form action="/dashboard_fashion" action="POST" class="form-horizontal" enctype="multipart/form-data">
                         <div class="control-group">
                             <label for="normal" class="control-label">Video Title</label>
                             <div class="controls">
-                                <input type="text" id="mask-phone" class="span8 mask text"></div>
+                                <input type="text" id="mask-phone" class="span8 mask text" name="title"></div>
                         </div>
                         <div class="control-group">
                             <label for="normal" class="control-label">Youtube URL</label>
                             <div class="controls">
-                                <input type="text" id="mask-phoneExt" class="span8 mask text"></div>
+                                <input type="text" id="mask-phoneExt" class="span8 mask text" name="url"></div>
                         </div>
                         <div class="control-group">
                             <label for="normal" class="control-label">Video Picture</label>
                             <div class="controls">
-                                <input type="file" id="mask-phoneInt" class="span8 mask text"></div>
+                                <input type="file" id="mask-phoneInt" class="span8 mask text" name="avatar"></div>
                         </div>
                         <div class="control-group">
                             <label for="normal" class="control-label">Category</label>
                             <div class="controls">
-                                <input type="text" id="mask-date" class="span8 mask text"></div>
+                                <input type="text" id="mask-date" class="span8 mask text" name="category"></div>
                         </div>
                         <div class="control-group">
                             <label class="control-label">News Details</label>
                             <div class="controls">
-                                <textarea class="span8"></textarea>
+                                <textarea class="span8" name="details"></textarea>
                             </div>
                         </div>
                         <div class="form-actions">

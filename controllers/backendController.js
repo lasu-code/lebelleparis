@@ -1,3 +1,12 @@
+let fs = require('fs');
+
+
+let Video = require("../models/videos");
+
+exports.signupPage = (req, res) => {
+    res.render('backend/signup', {});
+}
+
 exports.loginPage = (req, res) => {
     res.render('backend/login', {});
 }
@@ -56,4 +65,40 @@ exports.editShopPage = (req, res) => {
 
 exports.editCoverPage = (req, res) => {
     res.render('backend/editCover', {activeNav: 'covers'});
+}
+
+//posts
+
+exports.fashionPost = (req, res) => {
+    console.log('ji');
+}
+
+exports.videosPost = (req, res, next) => {
+    // const file = req.file
+    // const ext = file.mimetype.split('/')[1];
+    // if (!file) {
+    //     req.flash('error', 'upload a photo');
+    //     res.redirect('/profile');
+    // }
+    // else{
+    //     let oneVideo = new Video;
+    //     oneVideo.title = req.body.name;
+    //     oneVideo.url = req.body.url;
+    //     oneVideo.picture = req
+    //     oneVideo.category = req.body.category;
+    //     oneVideo.details = req.body.details;
+
+    //     oneVideo.save()
+    //         .then((data) => {
+    //             res.redirect('/dashboard_videos');
+    //         })
+    //         .catch((err) => {
+    //             console.log("Error occured", err);
+    //             req.flash('error', `${err.name}: ${err._message}`)
+    //             res.redirect('/dashboard_videos');
+    //         });
+    // }
+    res.redirect('/');
+    console.log('yyy');
+
 }
