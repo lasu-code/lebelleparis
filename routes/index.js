@@ -104,17 +104,6 @@ router.get("/logout", function (req, res) {
     res.redirect("/signin");
 });
 
-// authorizing the following pages
-// router.use('/dashboard',checkLoginStatus);
-// router.use('/dashboard_videos', checkLoginStatus);
-// router.use('/dashboard_fashion', checkLoginStatus);
-// router.use('/dashboard_covers', checkLoginStatus);
-// router.use('/dashboard_shop', checkLoginStatus);
-// router.use('/dashboard_about', checkLoginStatus);
-// router.use('/dashboard_changeEmail', checkLoginStatus);
-// router.use('/dashboard_changePass', checkLoginStatus);
-// router.use('/dashboard_deleteAcc', checkLoginStatus);
-
 router.route("/forgot_password")
     // .all(checkLoginStatus)
     .get( async (req, res) => {
